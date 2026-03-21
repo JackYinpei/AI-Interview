@@ -1,86 +1,82 @@
 [
   {
-    "id": "1",
-    "slug": "getting-started-with-nextjs",
-    "title": "Next.js 入门指南：从零开始构建现代 Web 应用",
-    "excerpt": "Next.js 是一个强大的 React 框架，提供服务端渲染、静态生成等特性。本文将带你从零开始，掌握 Next.js 的核心概念和最佳实践。",
-    "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
-    "category": "技术",
-    "tags": ["Next.js", "React", "Web开发"],
-    "author": "张三",
-    "authorAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=zhang",
-    "publishedAt": "2024-01-15",
-    "readingTime": "8 分钟",
-    "featured": true
+    "id": "1742500000001",
+    "slug": "ai-agent-interview-guide",
+    "title": "AI Agent 面试八股文完全指南",
+    "excerpt": "系统梳理 AI Agent 核心概念：从定义与组件、ReAct/CoT/ToT 等推理框架、Memory 与 Tool Use 设计，到多智能体协作、安全对齐与框架选型，覆盖面试高频考点。",
+    "description": "2025年最全AI Agent面试指南，涵盖Agent定义与核心组件、ReAct框架、CoT/ToT/GoT推理方法、Memory记忆系统、Tool Use与Function Calling、LangChain vs LlamaIndex对比、多智能体协作、安全对齐等14个高频考点，附详细解析与代码示例。",
+    "coverImage": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    "category": "AI",
+    "tags": ["Agent", "LLM", "面试"],
+    "keywords": ["AI Agent面试题", "Agent核心组件", "ReAct框架", "CoT思维链", "ToT思维树", "LLM Agent", "多智能体系统", "Function Calling", "Agent Memory", "LangChain", "LlamaIndex"],
+    "author": "AI面试官",
+    "authorAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=agent",
+    "authorBio": "专注于 AI/LLM 领域的技术面试辅导，深耕 Agent、RAG 等前沿技术方向",
+    "publishedAt": "2025-03-20",
+    "lastModified": "2025-03-21",
+    "readingTime": "35 分钟",
+    "featured": true,
+    "structuredFaq": [
+      {
+        "question": "什么是AI Agent？它由哪些核心组件构成？",
+        "answer": "AI Agent（智能体）是以大语言模型（LLM）为核心推理引擎的自主系统，能够感知环境、制定计划、调用工具并采取行动来完成目标。核心组件包括：LLM（推理引擎）、Planning（任务规划）、Memory（短期与长期记忆）、Tool Use（外部工具调用）和 Action（执行模块）。"
+      },
+      {
+        "question": "ReAct框架是什么？它如何将推理和行动结合？",
+        "answer": "ReAct（Reasoning + Acting）是经典的 Agent 框架，核心是将思维链推理和工具调用交替进行：Thought（推理当前状态）→ Action（调用搜索/API等工具）→ Observation（获取工具返回结果），循环执行直到任务完成。优势在于可解释性强、能通过外部数据减少幻觉。"
+      },
+      {
+        "question": "CoT、ToT、GoT三种推理方法有什么区别？",
+        "answer": "CoT（Chain-of-Thought，思维链）是线性逐步推理；ToT（Tree-of-Thought，思维树）扩展为树状搜索，支持多路径探索和回溯剪枝；GoT（Graph-of-Thought，思维图）进一步扩展为有向图，允许合并不同分支的思路。复杂度和适用场景依次递增。"
+      },
+      {
+        "question": "如何为Agent设计短期记忆和长期记忆系统？",
+        "answer": "短期记忆对应 LLM 上下文窗口，可通过完整历史、滑动窗口或摘要压缩实现。长期记忆使用向量数据库（语义检索）、知识图谱（关系推理）或 KV 存储（精确查找）持久化。两者通过「检索注入 + 摘要归档」配合：新对话从长期记忆检索相关信息注入上下文，对话结束后将有价值信息归档到长期记忆。"
+      },
+      {
+        "question": "LangChain和LlamaIndex的核心区别是什么？",
+        "answer": "LangChain 是通用 LLM 应用框架，强项是 Agent 编排、Chain 组合和工具调用，适合复杂 Agent 场景。LlamaIndex 专注数据索引与检索，强项是数据连接、索引构建和检索优化，适合 RAG 和知识库场景。纯 RAG 选 LlamaIndex，复杂 Agent 选 LangChain，两者也可结合使用。"
+      }
+    ]
   },
   {
-    "id": "2",
-    "slug": "mastering-tailwind-css",
-    "title": "精通 Tailwind CSS：原子化 CSS 的艺术",
-    "excerpt": "Tailwind CSS 以其独特的原子化设计理念彻底改变了前端样式的写法。本文深入探讨如何使用 Tailwind CSS 打造精美的用户界面。",
-    "coverImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-    "category": "设计",
-    "tags": ["CSS", "Tailwind", "前端"],
-    "author": "李四",
-    "authorAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=li",
-    "publishedAt": "2024-01-20",
-    "readingTime": "6 分钟",
-    "featured": false
-  },
-  {
-    "id": "3",
-    "slug": "react-hooks-deep-dive",
-    "title": "React Hooks 深度解析：useEffect 的正确使用方式",
-    "excerpt": "useEffect 是 React 中最容易被误用的 Hook 之一。本文将深入探讨其工作原理、常见陷阱以及最佳实践，帮助你写出更健壮的 React 代码。",
-    "coverImage": "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=800&q=80",
-    "category": "技术",
-    "tags": ["React", "Hooks", "JavaScript"],
-    "author": "王五",
-    "authorAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=wang",
-    "publishedAt": "2024-02-01",
-    "readingTime": "10 分钟",
-    "featured": true
-  },
-  {
-    "id": "4",
-    "slug": "building-rest-api-with-nodejs",
-    "title": "使用 Node.js 构建高性能 REST API",
-    "excerpt": "REST API 是现代 Web 开发的基石。本文将介绍如何使用 Node.js 和 Express 构建可扩展、高性能的 REST API，涵盖认证、错误处理和性能优化等内容。",
-    "coverImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
-    "category": "后端",
-    "tags": ["Node.js", "API", "后端开发"],
-    "author": "赵六",
-    "authorAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=zhao",
-    "publishedAt": "2024-02-10",
-    "readingTime": "12 分钟",
-    "featured": false
-  },
-  {
-    "id": "5",
-    "slug": "typescript-best-practices",
-    "title": "TypeScript 最佳实践：写出更安全的代码",
-    "excerpt": "TypeScript 已成为大型 JavaScript 项目的标配。本文分享实际项目中积累的 TypeScript 最佳实践，从类型设计到工程化配置，全面提升代码质量。",
-    "coverImage": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80",
-    "category": "技术",
-    "tags": ["TypeScript", "JavaScript", "最佳实践"],
-    "author": "张三",
-    "authorAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=zhang",
-    "publishedAt": "2024-02-15",
-    "readingTime": "9 分钟",
-    "featured": false
-  },
-  {
-    "id": "6",
-    "slug": "css-grid-layout-guide",
-    "title": "CSS Grid 布局完全指南：告别 float 时代",
-    "excerpt": "CSS Grid 是最强大的布局系统，可以轻松实现复杂的二维布局。本文从基础到高级，系统介绍 CSS Grid 的各种特性和实际应用场景。",
-    "coverImage": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
-    "category": "设计",
-    "tags": ["CSS", "布局", "前端"],
-    "author": "李四",
-    "authorAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=li",
-    "publishedAt": "2024-02-20",
-    "readingTime": "7 分钟",
-    "featured": false
+    "id": "1742500000002",
+    "slug": "rag-interview-guide",
+    "title": "RAG 面试八股文完全指南",
+    "excerpt": "全面解析 RAG 技术栈：从基本原理、检索与生成流水线、切块与嵌入策略，到 GraphRAG、多轮检索、幻觉防治，以及 Transformer、Function Call、MCP 等相关知识点。",
+    "description": "2025年最全RAG检索增强生成面试指南，涵盖RAG原理与优势、完整流水线、文本切块策略、Embedding模型评估、混合检索与Reranking、GraphRAG、Self-RAG等高级范式、幻觉防治，以及Transformer架构、Function Call、MCP协议等16个核心知识点。",
+    "coverImage": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
+    "category": "AI",
+    "tags": ["RAG", "LLM", "面试"],
+    "keywords": ["RAG面试题", "检索增强生成", "RAG流水线", "文本切块策略", "Embedding模型", "GraphRAG", "向量数据库", "Transformer架构", "Self-Attention", "MCP协议", "Function Calling", "混合检索"],
+    "author": "AI面试官",
+    "authorAvatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=rag",
+    "authorBio": "专注于 AI/LLM 领域的技术面试辅导，深耕 Agent、RAG 等前沿技术方向",
+    "publishedAt": "2025-03-21",
+    "lastModified": "2025-03-21",
+    "readingTime": "40 分钟",
+    "featured": true,
+    "structuredFaq": [
+      {
+        "question": "什么是RAG？与微调相比有什么优势？",
+        "answer": "RAG（Retrieval-Augmented Generation，检索增强生成）在 LLM 生成回答前先从外部知识库检索相关文档作为上下文。相比微调，RAG 的优势包括：知识可实时更新（无需重训模型）、成本低（无需GPU训练）、可追溯来源、减少幻觉、数据隐私更好（敏感数据不参与训练）。"
+      },
+      {
+        "question": "一个完整的RAG流水线包含哪些步骤？",
+        "answer": "离线阶段：数据采集 → 文档解析 → 文本切块（Chunking）→ 向量化（Embedding）→ 索引存储。在线阶段：Query 处理与改写 → 向量+关键词混合检索 → Reranking 重排序 → 上下文组装到 Prompt → LLM 生成回答 → 后处理与来源标注。"
+      },
+      {
+        "question": "GraphRAG和传统RAG有什么核心区别？",
+        "answer": "传统 RAG 用向量索引做语义相似度检索。GraphRAG（微软提出）额外构建知识图谱和社区层级结构，支持 Local Search（实体匹配 + 社区检索，适合具体问题）和 Global Search（社区摘要的 Map-Reduce，适合全局总结性问题）。GraphRAG 在多跳推理和全局理解上显著优于传统 RAG，但构建成本更高。"
+      },
+      {
+        "question": "如何选择合适的文本切块大小和重叠长度？",
+        "answer": "推荐 Chunk Size 为 200-500 tokens，Overlap 为 Chunk Size 的 10%-20%。小 Chunk 检索精确但上下文不足，大 Chunk 上下文完整但包含噪声。具体策略按场景选择：通用文档用 512 tokens，技术文档按代码块/函数切分，FAQ 按 Q&A 对切分，法律合同按条款切分。"
+      },
+      {
+        "question": "Transformer的Self-Attention机制核心原理是什么？",
+        "answer": "Self-Attention 核心公式：Attention(Q,K,V) = softmax(QK^T/√d_k)V。Q、K、V 是输入的三种线性变换，QK^T 计算 token 间关注程度，√d_k 缩放防止梯度消失，softmax 归一化为权重，乘以 V 加权聚合信息。Multi-Head Attention 并行多个注意力头关注不同模式。计算复杂度为 O(n²d)，这也是上下文窗口扩展的主要瓶颈。"
+      }
+    ]
   }
 ]
