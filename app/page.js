@@ -14,7 +14,7 @@ export default function HomePage() {
       <div className="text-center mb-14">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
           探索技术的{' '}
-          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
             无限可能
           </span>
         </h1>

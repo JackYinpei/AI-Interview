@@ -13,7 +13,7 @@ export default function ArticleCard({ article, featured = false }) {
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute top-3 left-3">
-            <span className="bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+            <span className="bg-primary-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
               {article.category}
             </span>
           </div>
@@ -31,14 +31,14 @@ export default function ArticleCard({ article, featured = false }) {
           {/* Tags */}
           <div className="flex flex-wrap gap-1.5 mb-3">
             {article.tags.slice(0, 3).map(tag => (
-              <span key={tag} className="text-xs text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">
+              <span key={tag} className="text-xs text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
                 #{tag}
               </span>
             ))}
           </div>
 
           {/* Title */}
-          <h2 className={`font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2 mb-2 ${featured ? 'text-2xl' : 'text-lg'}`}>
+          <h2 className={`font-bold text-gray-900 group-hover:text-primary-600 transition-colors line-clamp-2 mb-2 ${featured ? 'text-2xl' : 'text-lg'}`}>
             {article.title}
           </h2>
 

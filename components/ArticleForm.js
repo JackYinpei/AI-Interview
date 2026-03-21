@@ -157,7 +157,7 @@ export default function ArticleForm({ initialData = null }) {
                   value={form.title}
                   onChange={handleTitleChange}
                   placeholder="输入文章标题..."
-                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -167,7 +167,7 @@ export default function ArticleForm({ initialData = null }) {
                   value={form.slug}
                   onChange={handleChange}
                   placeholder="url-friendly-slug"
-                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono"
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent font-mono"
                 />
               </div>
               <div>
@@ -178,7 +178,7 @@ export default function ArticleForm({ initialData = null }) {
                   onChange={handleChange}
                   placeholder="一句话介绍这篇文章..."
                   rows={3}
-                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
                 />
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function ArticleForm({ initialData = null }) {
                   value={form.category}
                   onChange={handleChange}
                   placeholder="如：技术、设计、随笔"
-                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -204,7 +204,7 @@ export default function ArticleForm({ initialData = null }) {
                   value={form.tags}
                   onChange={handleChange}
                   placeholder="React, Next.js, 前端"
-                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
               </div>
             </div>
@@ -220,7 +220,7 @@ export default function ArticleForm({ initialData = null }) {
                   value={form.coverImage}
                   onChange={handleChange}
                   placeholder="https://..."
-                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
                 {form.coverImage && (
                   <div className="mt-2 rounded-lg overflow-hidden aspect-video">
@@ -235,7 +235,7 @@ export default function ArticleForm({ initialData = null }) {
                   value={form.author}
                   onChange={handleChange}
                   placeholder="作者姓名"
-                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -245,7 +245,7 @@ export default function ArticleForm({ initialData = null }) {
                   value={form.readingTime}
                   onChange={handleChange}
                   placeholder="5 分钟"
-                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
               </div>
               <div className="flex items-center gap-2">
@@ -255,7 +255,7 @@ export default function ArticleForm({ initialData = null }) {
                   id="featured"
                   checked={form.featured}
                   onChange={handleChange}
-                  className="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                  className="w-4 h-4 text-primary-600 rounded border-gray-300 focus:ring-primary-500"
                 />
                 <label htmlFor="featured" className="text-sm font-medium text-gray-700">设为精选文章 ⭐</label>
               </div>
@@ -271,14 +271,14 @@ export default function ArticleForm({ initialData = null }) {
               <button
                 type="button"
                 onClick={() => setActiveTab('edit')}
-                className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'edit' ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50/50' : 'text-gray-500 hover:text-gray-700'}`}
+                className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'edit' ? 'text-primary-600 border-b-2 border-primary-600 bg-primary-50/50' : 'text-gray-500 hover:text-gray-700'}`}
               >
                 ✏️ 编辑
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab('preview')}
-                className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'preview' ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50/50' : 'text-gray-500 hover:text-gray-700'}`}
+                className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'preview' ? 'text-primary-600 border-b-2 border-primary-600 bg-primary-50/50' : 'text-gray-500 hover:text-gray-700'}`}
               >
                 👁️ 预览
               </button>

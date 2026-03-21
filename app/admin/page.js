@@ -55,7 +55,7 @@ export default function AdminPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <div className="w-12 h-12 border-4 border-primary-600 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
           <p className="text-gray-500">加载中...</p>
         </div>
       </div>
@@ -81,7 +81,7 @@ export default function AdminPage() {
       {/* Stats Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
         {[
-          { label: '全部文章', value: articles.length, icon: '📄', color: 'bg-blue-50 text-blue-700' },
+          { label: '全部文章', value: articles.length, icon: '📄', color: 'bg-primary-50 text-primary-700' },
           { label: '精选文章', value: articles.filter(a => a.featured).length, icon: '⭐', color: 'bg-amber-50 text-amber-700' },
           { label: '文章分类', value: new Set(articles.map(a => a.category)).size, icon: '🏷️', color: 'bg-purple-50 text-purple-700' },
           { label: '作者数量', value: new Set(articles.map(a => a.author)).size, icon: '👤', color: 'bg-green-50 text-green-700' },
@@ -132,7 +132,7 @@ export default function AdminPage() {
                       </div>
                     </td>
                     <td className="px-4 py-4 hidden sm:table-cell">
-                      <span className="bg-blue-50 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                      <span className="bg-primary-50 text-primary-700 text-xs font-medium px-2.5 py-1 rounded-full">
                         {article.category}
                       </span>
                     </td>
@@ -159,13 +159,13 @@ export default function AdminPage() {
                         <Link
                           href={`/article/${article.slug}`}
                           target="_blank"
-                          className="text-xs text-gray-500 hover:text-blue-600 transition-colors font-medium px-2 py-1 rounded hover:bg-blue-50"
+                          className="text-xs text-gray-500 hover:text-primary-600 transition-colors font-medium px-2 py-1 rounded hover:bg-primary-50"
                         >
                           预览
                         </Link>
                         <Link
                           href={`/admin/articles/${article.id}/edit`}
-                          className="text-xs text-blue-600 hover:text-blue-700 transition-colors font-medium px-2 py-1 rounded hover:bg-blue-50"
+                          className="text-xs text-primary-600 hover:text-primary-700 transition-colors font-medium px-2 py-1 rounded hover:bg-primary-50"
                         >
                           编辑
                         </Link>

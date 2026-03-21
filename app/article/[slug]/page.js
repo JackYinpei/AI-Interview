@@ -29,9 +29,9 @@ export default async function ArticlePage({ params }) {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
-        <Link href="/" className="hover:text-blue-600 transition-colors">首页</Link>
+        <Link href="/" className="hover:text-primary-600 transition-colors">首页</Link>
         <span>/</span>
-        <span className="text-blue-600">{article.category}</span>
+        <span className="text-primary-600">{article.category}</span>
         <span>/</span>
         <span className="text-gray-600 truncate max-w-xs">{article.title}</span>
       </nav>
@@ -40,11 +40,11 @@ export default async function ArticlePage({ params }) {
       <header className="mb-10">
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-4">
-          <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+          <span className="bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
             {article.category}
           </span>
           {article.tags.map(tag => (
-            <span key={tag} className="text-xs text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+            <span key={tag} className="text-xs text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
               #{tag}
             </span>
           ))}
