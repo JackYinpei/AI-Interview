@@ -1,12 +1,20 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
 export default function AdminPage() {
   const [articles, setArticles] = useState([])
   const [loading, setLoading] = useState(true)
   const [deleting, setDeleting] = useState(null)
+  const router = useRouter()
+
+  async function handleLogout() {
+    await fetch('/api/auth/logout', { method: 'POST' })
+    router.push('/admin/login')
+    router.refresh()
+  }
 
   useEffect(() => {
     fetchArticles()
@@ -79,12 +87,23 @@ export default function AdminPage() {
             共 <span className="tabular-nums">{articles.length}</span> 篇文章
           </p>
         </div>
-        <Link href="/admin/articles/new" className="btn-primary flex items-center gap-2">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-          </svg>
-          新建文章
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href="/admin/articles/new" className="btn-primary flex items-center gap-2">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+            </svg>
+            新建文章
+          </Link>
+          <button
+            onClick={handleLogout}
+            className="btn-secondary flex items-center gap-2 text-sm"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+            退出
+          </button>
+        </div>
       </div>
 
       {/* Stats */}
