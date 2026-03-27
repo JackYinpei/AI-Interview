@@ -6,7 +6,7 @@ async function sha256(message) {
   const msgBuffer = new TextEncoder().encode(message)
   const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer)
   const hashArray = Array.from(new Uint8Array(hashBuffer))
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
+  return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('')
 }
 
 export async function POST(request) {
@@ -21,13 +21,10 @@ export async function POST(request) {
   }
 
   if (!password || password !== adminPassword) {
-    return NextResponse.json(
-      { error: '密码错误' },
-      { status: 401 }
-    )
+    return NextResponse.json({ error: '密码错误' }, { status: 401 })
   }
 
-  const token = await sha256(adminPassword + '-admin-secret')
+  const token = await sha256(`${adminPassword}-admin-secret`)
   const response = NextResponse.json({ success: true })
 
   response.cookies.set(COOKIE_NAME, token, {
@@ -35,7 +32,7 @@ export async function POST(request) {
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
     path: '/',
-    maxAge: 60 * 60 * 24 * 7, // 7 days
+    maxAge: 60 * 60 * 24 * 7,
   })
 
   return response

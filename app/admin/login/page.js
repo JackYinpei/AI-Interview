@@ -13,21 +13,21 @@ function LoginForm() {
   const noPassword = searchParams.get('error') === 'no-password'
   const from = searchParams.get('from') || '/admin'
 
-  async function handleSubmit(e) {
-    e.preventDefault()
+  async function handleSubmit(event) {
+    event.preventDefault()
     setError('')
     setLoading(true)
 
     try {
-      const res = await fetch('/api/auth/login', {
+      const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password }),
       })
 
-      const data = await res.json()
+      const data = await response.json()
 
-      if (!res.ok) {
+      if (!response.ok) {
         setError(data.error || '登录失败')
         return
       }
@@ -43,10 +43,10 @@ function LoginForm() {
 
   if (noPassword) {
     return (
-      <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-center">
-        <p className="text-sm text-red-700 font-medium">未配置管理员密码</p>
-        <p className="text-xs text-red-500 mt-1">
-          请设置环境变量 <code className="bg-red-100 px-1.5 py-0.5 rounded">ADMIN_PASSWORD</code>
+      <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-center">
+        <p className="text-sm font-medium text-red-700">未配置管理员密码</p>
+        <p className="mt-1 text-xs text-red-500">
+          请设置环境变量 <code className="rounded bg-red-100 px-1.5 py-0.5">ADMIN_PASSWORD</code>
         </p>
       </div>
     )
@@ -55,22 +55,26 @@ function LoginForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label htmlFor="password" className="sr-only">管理员密码</label>
+        <label htmlFor="password" className="sr-only">
+          管理员密码
+        </label>
         <input
           id="password"
           type="password"
           value={password}
-          onChange={e => setPassword(e.target.value)}
+          onChange={event => setPassword(event.target.value)}
           placeholder="输入管理员密码"
           required
           autoFocus
           autoComplete="current-password"
-          className="w-full px-4 py-3 rounded-xl border border-subtle bg-surface text-ink placeholder:text-ink-muted focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-shadow"
+          className="w-full rounded-xl border border-subtle bg-surface px-4 py-3 text-ink placeholder:text-ink-muted transition-shadow focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
         />
       </div>
 
       {error && (
-        <p className="text-sm text-red-600 text-center" role="alert">{error}</p>
+        <p className="text-center text-sm text-red-600" role="alert">
+          {error}
+        </p>
       )}
 
       <button
@@ -86,21 +90,23 @@ function LoginForm() {
 
 export default function AdminLoginPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
+    <div className="flex min-h-screen items-center justify-center px-4">
       <div className="w-full max-w-sm">
-        <div className="text-center mb-8">
-          <div className="w-12 h-12 rounded-lg bg-vermilion flex items-center justify-center text-white text-lg font-bold mx-auto mb-4 -rotate-3">
+        <div className="mb-8 text-center">
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-vermilion text-lg font-bold text-white -rotate-3">
             文
           </div>
           <h1 className="text-xl font-bold text-ink">管理后台</h1>
-          <p className="text-sm text-ink-muted mt-1">请输入管理员密码</p>
+          <p className="mt-1 text-sm text-ink-muted">请输入管理员密码</p>
         </div>
 
-        <Suspense fallback={
-          <div className="text-center py-4">
-            <div className="w-8 h-8 border-4 border-primary-600 border-t-transparent rounded-full animate-spin mx-auto" />
-          </div>
-        }>
+        <Suspense
+          fallback={
+            <div className="py-4 text-center">
+              <div className="mx-auto h-8 w-8 animate-spin rounded-full border-4 border-primary-600 border-t-transparent" />
+            </div>
+          }
+        >
           <LoginForm />
         </Suspense>
       </div>

@@ -5,8 +5,8 @@ export async function GET(request, { params }) {
   try {
     const { id } = await params
     const articles = getAllArticles()
-    const article = articles.find(a => a.id === id || a.slug === id)
-    
+    const article = articles.find(item => item.id === id || item.slug === id)
+
     if (!article) {
       return NextResponse.json({ error: '文章不存在' }, { status: 404 })
     }

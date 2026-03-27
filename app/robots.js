@@ -6,7 +6,6 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: '/admin/',
       },
       // Explicitly allow AI search engine bots
       { userAgent: 'GPTBot', allow: '/' },
