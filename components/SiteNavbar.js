@@ -124,6 +124,9 @@ function isActiveNav(href, pathname) {
   if (href === '/journal') {
     return pathname === '/journal' || pathname.startsWith('/article/')
   }
+  if (href === '/reading') {
+    return pathname === '/reading'
+  }
   return false
 }
 

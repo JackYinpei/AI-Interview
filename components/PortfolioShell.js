@@ -1,8 +1,12 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import SiteNavbar from '@/components/SiteNavbar'
 import { portfolioContent } from '@/data/portfolio'
+import { getAllBooks } from '@/data/books'
+
+const readBooks = getAllBooks().filter(b => b.status === 'read')
 
 const LOCALE_STORAGE_KEY = 'portfolio-locale'
 
@@ -254,6 +258,33 @@ export default function PortfolioShell() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="scroll-mt-28 pt-24">
+          <div className="flex items-end justify-between gap-6">
+            <div>
+              <p className="section-kicker">{locale === 'zh' ? 'READING' : 'READING'}</p>
+              <h2 className="mt-5 font-display text-4xl leading-tight tracking-tight text-ink sm:text-5xl">
+                {locale === 'zh' ? '最近读过的书' : 'Books I have read'}
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-8 text-ink-secondary sm:text-lg">
+                {locale === 'zh'
+                  ? '技术、经济、哲学、历史、文学 —— 读得杂，但每一本都在某个时刻帮我多想了一步。'
+                  : 'Tech, economics, philosophy, history, literature — wide-ranging reads that each shaped how I think.'}
+              </p>
+            </div>
+            <Link
+              href="/reading"
+              className="editorial-link shrink-0"
+            >
+              {locale === 'zh' ? '查看全部书架' : 'Full bookshelf'}
+            </Link>
+          </div>
+
+          <div className="mt-10 overflow-hidden">
+            <BookMarquee books={readBooks} direction="left" />
+            <BookMarquee books={[...readBooks].reverse()} direction="right" className="mt-4" />
           </div>
         </section>
 
@@ -592,6 +623,37 @@ function WritingPreview() {
             ))}
           </div>
         </div>
+      </div>
+    </div>
+  )
+}
+
+function BookMarquee({ books, direction = 'left', className = '' }) {
+  const doubled = [...books, ...books]
+  const animClass = direction === 'left' ? 'animate-marquee-left' : 'animate-marquee-right'
+
+  return (
+    <div className={`relative ${className}`}>
+      {/* Fade edges */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-paper to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-paper to-transparent" />
+
+      <div className={`flex gap-4 ${animClass}`} style={{ width: 'max-content' }}>
+        {doubled.map((book, i) => (
+          <div
+            key={`${book.title}-${i}`}
+            className="group relative w-[5.5rem] shrink-0 sm:w-24"
+          >
+            <div className="aspect-[3/4] overflow-hidden rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.1)] ring-1 ring-black/5 transition-transform duration-300 group-hover:scale-105">
+              <img
+                src={book.localCover}
+                alt={book.title}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )

@@ -15,6 +15,7 @@ export const portfolioContent = {
       { href: '#systems', label: '能力' },
       { href: '#writing', label: '创作' },
       { href: '/journal', label: '博客' },
+      { href: '/reading', label: '书架' },
       { href: '#connect', label: '联系' },
     ],
     hero: {
@@ -232,6 +233,7 @@ export const portfolioContent = {
       { href: '#systems', label: 'Systems' },
       { href: '#writing', label: 'Writing' },
       { href: '/journal', label: 'Blog' },
+      { href: '/reading', label: 'Bookshelf' },
       { href: '#connect', label: 'Connect' },
     ],
     hero: {
