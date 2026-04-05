@@ -10,11 +10,11 @@ export const metadata = {
   description:
     '技术思考、AI 工程、Agent 架构、RAG 系统——这里是我把复杂问题拆解成可读文章的地方。长期更新，深度优先。',
   openGraph: {
-    title: 'Journal | Jack Yinpei',
+    title: 'Journal | YangProfile',
     description:
       '技术思考、AI 工程、Agent 架构、RAG 系统——把复杂问题拆解成可读文章。',
     url: `${siteUrl}/journal`,
-    siteName: 'Jack Yinpei',
+    siteName: 'YangProfile',
     locale: 'zh_CN',
     type: 'website',
     images: [
@@ -22,13 +22,13 @@ export const metadata = {
         url: '/images/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Journal — Jack Yinpei',
+        alt: 'Journal — YangProfile',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Journal | Jack Yinpei',
+    title: 'Journal | YangProfile',
     description: '技术思考、AI 工程、Agent 架构、RAG 系统。',
     images: ['/images/og-default.png'],
   },

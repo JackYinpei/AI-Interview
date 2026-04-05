@@ -1,7 +1,7 @@
 export const portfolioContent = {
   zh: {
     locale: 'zh-CN',
-    brand: 'Jack Yinpei',
+    brand: 'YangProfile',
     header: {
       githubLabel: 'GitHub',
       languageAriaLabel: '切换站点语言',
@@ -219,7 +219,7 @@ export const portfolioContent = {
   },
   en: {
     locale: 'en',
-    brand: 'Jack Yinpei',
+    brand: 'YangProfile',
     header: {
       githubLabel: 'GitHub',
       languageAriaLabel: 'Switch site language',

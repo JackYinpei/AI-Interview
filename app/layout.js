@@ -6,13 +6,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Jack Yinpei | Portfolio',
-    template: '%s | Jack Yinpei',
+    default: 'YangProfile | Portfolio',
+    template: '%s | YangProfile',
   },
   description:
-    'Portfolio of Jack Yinpei, a full-stack developer building media pipelines, AI audio experiences, WeChat mini programs, and AI-assisted fiction workflows.',
+    'Portfolio of YangProfile, a full-stack developer building media pipelines, AI audio experiences, WeChat mini programs, and AI-assisted fiction workflows.',
   keywords: [
-    'Jack Yinpei',
+    'YangProfile',
     'Portfolio',
     'Next.js',
     'Media Pipeline',
@@ -21,19 +21,19 @@ export const metadata = {
     'LingDaily',
     'Magnet2Video',
   ],
-  authors: [{ name: 'Jack Yinpei' }],
-  creator: 'Jack Yinpei',
-  publisher: 'Jack Yinpei',
+  authors: [{ name: 'YangProfile' }],
+  creator: 'YangProfile',
+  publisher: 'YangProfile',
   formatDetection: {
     email: false,
     telephone: false,
   },
   openGraph: {
-    title: 'Jack Yinpei | Portfolio',
+    title: 'YangProfile | Portfolio',
     description:
       'Full-stack developer portfolio featuring Magnet2Video, a Spotify-style WeChat music player, LingDaily, and AI-assisted fiction workflows.',
     url: '/',
-    siteName: 'Jack Yinpei',
+    siteName: 'YangProfile',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -41,13 +41,13 @@ export const metadata = {
         url: '/images/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Jack Yinpei — Full-Stack Developer Portfolio',
+        alt: 'YangProfile — Full-Stack Developer Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jack Yinpei | Portfolio',
+    title: 'YangProfile | Portfolio',
     description:
       'Media pipelines, AI audio interfaces, open-source language learning, and narrative-driven product systems.',
     images: ['/images/og-default.png'],
@@ -78,7 +78,7 @@ const clientInitScript = `
 const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Jack Yinpei',
+  name: 'YangProfile',
   url: siteUrl,
   sameAs: ['https://github.com/JackYinpei'],
   jobTitle: 'Full-Stack Developer',
@@ -97,14 +97,14 @@ const personJsonLd = {
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Jack Yinpei',
+  name: 'YangProfile',
   url: siteUrl,
   description:
     'Portfolio featuring product systems, open-source work, AI audio experiences, and creative writing workflows.',
   inLanguage: ['en', 'zh-CN'],
   author: {
     '@type': 'Person',
-    name: 'Jack Yinpei',
+    name: 'YangProfile',
   },
 }
 

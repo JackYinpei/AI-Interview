@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
       title: article.title,
       description: article.description || article.excerpt,
       url: articleUrl,
-      siteName: 'Jack Yinpei',
+      siteName: 'YangProfile',
       locale: 'zh_CN',
       type: 'article',
       publishedTime: article.publishedAt,
@@ -87,7 +87,7 @@ export default async function ArticlePage({ params }) {
     },
     publisher: {
       '@type': 'Person',
-      name: 'Jack Yinpei',
+      name: 'YangProfile',
       url: siteUrl,
     },
     mainEntityOfPage: {
