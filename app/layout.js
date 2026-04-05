@@ -18,7 +18,7 @@ export const metadata = {
     'Media Pipeline',
     'AI Audio',
     'WeChat Mini Program',
-    'Talk News',
+    'LingDaily',
     'Magnet2Video',
   ],
   authors: [{ name: 'Jack Yinpei' }],
@@ -31,17 +31,26 @@ export const metadata = {
   openGraph: {
     title: 'Jack Yinpei | Portfolio',
     description:
-      'Full-stack developer portfolio featuring Magnet2Video, a Spotify-style WeChat music player, Talk News, and AI-assisted fiction workflows.',
+      'Full-stack developer portfolio featuring Magnet2Video, a Spotify-style WeChat music player, LingDaily, and AI-assisted fiction workflows.',
     url: '/',
     siteName: 'Jack Yinpei',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Jack Yinpei — Full-Stack Developer Portfolio',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Jack Yinpei | Portfolio',
     description:
       'Media pipelines, AI audio interfaces, open-source language learning, and narrative-driven product systems.',
+    images: ['/images/og-default.png'],
   },
   robots: {
     index: true,
@@ -53,9 +62,6 @@ export const metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  alternates: {
-    canonical: '/',
   },
 }
 

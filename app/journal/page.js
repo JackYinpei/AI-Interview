@@ -3,9 +3,38 @@ import Link from 'next/link'
 import EditorialChrome from '@/components/EditorialChrome'
 import { getAllArticles } from '@/lib/articles'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+
 export const metadata = {
   title: 'Journal',
-  description: 'Long-form technical articles and interview guides preserved inside the portfolio.',
+  description:
+    '技术思考、AI 工程、Agent 架构、RAG 系统——这里是我把复杂问题拆解成可读文章的地方。长期更新，深度优先。',
+  openGraph: {
+    title: 'Journal | Jack Yinpei',
+    description:
+      '技术思考、AI 工程、Agent 架构、RAG 系统——把复杂问题拆解成可读文章。',
+    url: `${siteUrl}/journal`,
+    siteName: 'Jack Yinpei',
+    locale: 'zh_CN',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Journal — Jack Yinpei',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Journal | Jack Yinpei',
+    description: '技术思考、AI 工程、Agent 架构、RAG 系统。',
+    images: ['/images/og-default.png'],
+  },
+  alternates: {
+    canonical: `${siteUrl}/journal`,
+  },
 }
 
 export default function JournalPage() {
@@ -17,7 +46,7 @@ export default function JournalPage() {
     <EditorialChrome>
       <section className="pt-4">
         <p className="section-kicker">JOURNAL</p>
-        <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_20rem] lg:items-end">
+        <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_20rem] lg:items-start">
           <div>
             <h1 className="max-w-4xl font-display text-[3.5rem] leading-[0.95] tracking-tight text-ink sm:text-[5rem]">
               这里放的是我平时写下来的技术思考。
@@ -30,12 +59,12 @@ export default function JournalPage() {
 
           <div className="ghost-panel rounded-[2rem] p-6">
             <p className="section-kicker">文章目录</p>
-            <div className="mt-5 space-y-4">
+            <div className="mt-5 max-h-64 space-y-4 overflow-y-auto pr-1 lg:max-h-[28rem]">
               {articles.map(article => (
-                <div key={article.slug} className="border-l border-subtle pl-4">
+                <Link key={article.slug} href={`/article/${article.slug}`} className="block border-l border-subtle pl-4 transition-colors hover:border-primary-500">
                   <p className="font-display text-xl text-ink">{article.title}</p>
                   <p className="mt-1 text-sm text-ink-muted">{article.readingTime}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

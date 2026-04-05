@@ -46,12 +46,12 @@ export const portfolioContent = {
       ],
       quickFacts: [
         { label: '作品形态', value: 'Web App / 小程序 / OSS / Fiction' },
-        { label: '公开入口', value: 'GitHub Profile + Talk News Repo' },
+        { label: '公开入口', value: 'GitHub Profile + LingDaily Repo' },
       ],
       stats: [
         { value: 'Magnet2Video', label: '媒体下载与播放系统' },
         { value: 'WeChat Music', label: 'Spotify 风格小程序' },
-        { value: 'Talk News', label: '新闻对话学语言' },
+        { value: 'LingDaily', label: '新闻对话学语言' },
         { value: 'AI Fiction', label: '世界观驱动写作' },
       ],
     },
@@ -97,10 +97,10 @@ export const portfolioContent = {
         visual: 'music',
       },
       {
-        slug: 'talk-news',
+        slug: 'lingdaily',
         label: 'Open Source',
         status: 'GitHub Repository',
-        title: 'Talk News',
+        title: 'LingDaily',
         description:
           '一个让用户通过和 AI 聊今天的新闻来学习语言的开源项目。核心亮点是端到端音频模型，以及新闻、生字词的自动抽取能力。',
         details: [
@@ -110,8 +110,8 @@ export const portfolioContent = {
         ],
         stack: ['OpenAI Audio', 'News Pipeline', 'Vocabulary Extraction', 'Conversation Design'],
         metrics: ['Speech-first', 'Daily News', 'Language Practice'],
-        link: { href: 'https://github.com/JackYinpei/talk-news', label: '打开 GitHub 仓库' },
-        visual: 'talk-news',
+        link: { href: 'https://lingdaily.yasobi.xyz/', label: '打开 LingDaily' },
+        visual: 'lingdaily',
       },
       {
         slug: 'ai-fiction',
@@ -208,8 +208,8 @@ export const portfolioContent = {
           meta: '查看所有公开仓库与最近项目',
         },
         {
-          href: 'https://github.com/JackYinpei/talk-news',
-          label: 'Talk News Repo',
+          href: 'https://github.com/JackYinpei/lingdaily',
+          label: 'LingDaily Repo',
           meta: '开源语言学习项目，围绕新闻与语音对话',
         },
       ],
@@ -264,12 +264,12 @@ export const portfolioContent = {
       ],
       quickFacts: [
         { label: 'Formats', value: 'Web App / Mini Program / OSS / Fiction' },
-        { label: 'Public Entry', value: 'GitHub Profile + Talk News Repo' },
+        { label: 'Public Entry', value: 'GitHub Profile + LingDaily Repo' },
       ],
       stats: [
         { value: 'Magnet2Video', label: 'media download and playback pipeline' },
         { value: 'WeChat Music', label: 'Spotify-style mini program' },
-        { value: 'Talk News', label: 'news-driven language learning' },
+        { value: 'LingDaily', label: 'news-driven language learning' },
         { value: 'AI Fiction', label: 'worldbuilding-led writing workflow' },
       ],
     },
@@ -315,10 +315,10 @@ export const portfolioContent = {
         visual: 'music',
       },
       {
-        slug: 'talk-news',
+        slug: 'lingdaily',
         label: 'Open Source',
         status: 'GitHub Repository',
-        title: 'Talk News',
+        title: 'LingDaily',
         description:
           'An open-source project that helps users learn a language by talking with AI about the day’s news. Its key strengths are end-to-end audio and automatic vocabulary extraction.',
         details: [
@@ -328,8 +328,8 @@ export const portfolioContent = {
         ],
         stack: ['OpenAI Audio', 'News Pipeline', 'Vocabulary Extraction', 'Conversation Design'],
         metrics: ['Speech-first', 'Daily News', 'Language Practice'],
-        link: { href: 'https://github.com/JackYinpei/talk-news', label: 'Open GitHub repository' },
-        visual: 'talk-news',
+        link: { href: 'https://lingdaily.yasobi.xyz/', label: 'Open LingDaily' },
+        visual: 'lingdaily',
       },
       {
         slug: 'ai-fiction',
@@ -426,8 +426,8 @@ export const portfolioContent = {
           meta: 'Browse public repositories and current work',
         },
         {
-          href: 'https://github.com/JackYinpei/talk-news',
-          label: 'Talk News Repo',
+          href: 'https://github.com/JackYinpei/lingdaily',
+          label: 'LingDaily Repo',
           meta: 'Open-source language learning built around news and voice',
         },
       ],

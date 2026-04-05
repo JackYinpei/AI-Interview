@@ -372,8 +372,8 @@ function ProjectVisual({ project }) {
     return <MusicPreview />
   }
 
-  if (project.visual === 'talk-news') {
-    return <TalkNewsPreview />
+  if (project.visual === 'lingdaily') {
+    return <LingDailyPreview />
   }
 
   return <WritingPreview />
@@ -513,12 +513,12 @@ function MusicPreview() {
   )
 }
 
-function TalkNewsPreview() {
+function LingDailyPreview() {
   return (
     <div className="project-surface aspect-[16/10] overflow-hidden rounded-[2.25rem] p-5 sm:p-6">
       <div className="flex h-full flex-col rounded-[1.7rem] bg-[#15171f] p-5 text-white shadow-[0_20px_45px_rgba(21,23,31,0.25)]">
         <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.28em] text-white/45">
-          <span>talk news</span>
+          <span>lingdaily</span>
           <span>audio-first learning</span>
         </div>
 
@@ -648,6 +648,8 @@ function BookMarquee({ books, direction = 'left', className = '' }) {
               <img
                 src={book.localCover}
                 alt={book.title}
+                width={96}
+                height={128}
                 loading="lazy"
                 className="h-full w-full object-cover"
               />
