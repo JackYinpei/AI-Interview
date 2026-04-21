@@ -20,38 +20,39 @@ export const portfolioContent = {
     ],
     hero: {
       eyebrow: 'FULL-STACK DEVELOPER / AI PRODUCT BUILDER / NARRATIVE SYSTEMS',
-      lead: '做能被',
-      accentA: '观看',
-      middle: '、能被',
-      accentB: '聆听',
-      tail: '也能被续写的产品。',
+      lead: '做一个',
+      accentA: '低门槛参与',
+      middle: '、',
+      accentB: '高频次沉淀、',
+      tail: '可持续生长的内容产品。',
       description:
-        '我把媒体下载链路、AI 音频交互和叙事设计放进同一套产品方法里。关心的不只是功能上线，而是从输入、处理、分发到最终体验，整条链路是否足够顺。',
+        '我关心的不只是功能是否上线，而是用户能不能轻松开始、持续参与，并把每一次使用都沉淀成新的内容资产。真正有价值的产品，不只是好用，还要能形成内容飞轮和长期壁垒。',
       primaryCta: '查看项目',
       secondaryCta: '进入 GitHub',
       highlightTitle: '当前关注',
       highlights: [
         {
-          title: '媒体管线',
-          text: '把 magnet、下载任务、海报元数据和 S3 播放链路接到一起。',
+          title: '更好的观影体验',
+          text: '把资源获取、元数据补齐、播放准备和在线播放整成一条顺滑链路，让“能看”变成“更好看”。',
         },
         {
-          title: 'AI 音频体验',
-          text: '用端到端音频模型和新闻对话，把“练语言”做成更自然的输入方式。',
+          title: '更有用的新闻播客',
+          text: '把 AI 音频、新闻理解和播客式陪伴组合在一起，让信息获取不只是能听见，而是真的更有用。',
         },
         {
           title: '叙事系统',
           text: '先定义世界观和主要矛盾，再让 AI 在明确约束下扩写故事。',
         },
       ],
-      quickFacts: [
-        { label: '作品形态', value: 'Web App / 小程序 / OSS / Fiction' },
-        { label: '公开入口', value: 'GitHub Profile + LingDaily Repo' },
-      ],
+      quickFacts: [{ label: '作品形态', value: 'Web App / 小程序 / iOS App' }],
       stats: [
         { value: 'Magnet2Video', label: '媒体下载与播放系统' },
         { value: 'WeChat Music', label: 'Spotify 风格小程序' },
-        { value: 'LingDaily', label: '新闻对话学语言' },
+        {
+          value: 'LingDaily',
+          label: '新闻播客与语言练习',
+          href: 'https://lingdaily.yasobi.xyz/',
+        },
         { value: 'AI Fiction', label: '世界观驱动写作' },
       ],
     },
@@ -99,17 +100,18 @@ export const portfolioContent = {
       {
         slug: 'lingdaily',
         label: 'Open Source',
-        status: 'GitHub Repository',
+        status: 'Live Product',
         title: 'LingDaily',
         description:
-          '一个让用户通过和 AI 聊今天的新闻来学习语言的开源项目。核心亮点是端到端音频模型，以及新闻、生字词的自动抽取能力。',
+          '一个把 AI 音频、每日新闻和播客式收听结合起来的产品。它既能帮用户获取信息，也能把新闻对话转成更自然的语言练习。',
         details: [
-          '把“读新闻”改造成“围绕新闻进行真实对话”，降低语言学习的进入门槛。',
-          '利用音频优先的交互方式，让输入更接近日常开口表达，而不是只靠文本。',
-          '把新闻内容、词汇提取和对话节奏组合成完整学习闭环。',
+          '把“读新闻”改造成“听新闻、聊新闻”，让输入方式更接近日常习惯。',
+          '利用端到端音频与内容抽取，把新闻播报、词汇理解和对话追问串成同一条体验链。',
+          '重点不只是多一个 AI 入口，而是做出一个真正有用、愿意反复打开的新闻播客。',
         ],
         stack: ['OpenAI Audio', 'News Pipeline', 'Vocabulary Extraction', 'Conversation Design'],
         metrics: ['Speech-first', 'Daily News', 'Language Practice'],
+        titleHref: 'https://lingdaily.yasobi.xyz/',
         link: { href: 'https://lingdaily.yasobi.xyz/', label: '打开 LingDaily' },
         visual: 'lingdaily',
       },
@@ -198,9 +200,9 @@ export const portfolioContent = {
     },
     connect: {
       eyebrow: 'CONNECT',
-      title: '公开入口目前在 GitHub',
+      title: '可以从这里继续看',
       description:
-        '如果你想聊媒体基础设施、AI 音频产品、微信小程序体验，或者叙事驱动型应用，可以先从 GitHub 找到我。',
+        'GitHub 里能看到项目脉络，LingDaily 则可以直接体验当前这条产品线。',
       links: [
         {
           href: 'https://github.com/JackYinpei',
@@ -208,9 +210,9 @@ export const portfolioContent = {
           meta: '查看所有公开仓库与最近项目',
         },
         {
-          href: 'https://github.com/JackYinpei/lingdaily',
-          label: 'LingDaily Repo',
-          meta: '开源语言学习项目，围绕新闻与语音对话',
+          href: 'https://lingdaily.yasobi.xyz/',
+          label: 'LingDaily',
+          meta: '直接体验新闻播客与对话产品',
         },
       ],
       footnote: '目前这是这个作品集的第一版，后续还会继续补充更多案例细节与视觉资产。',
@@ -238,38 +240,39 @@ export const portfolioContent = {
     ],
     hero: {
       eyebrow: 'FULL-STACK DEVELOPER / AI PRODUCT BUILDER / NARRATIVE SYSTEMS',
-      lead: 'I build products that can be',
-      accentA: 'watched',
+      lead: 'I build content products with',
+      accentA: 'low-friction participation',
       middle: ',',
-      accentB: 'heard',
-      tail: 'and continuously re-authored.',
+      accentB: 'high-frequency accumulation,',
+      tail: 'and compounding growth.',
       description:
-        'My work sits between media pipelines, AI audio interfaces, and narrative design. I care about the entire chain: input, processing, delivery, and the moment the user finally hits play.',
+        'I care less about isolated features and more about whether users can get started easily, keep contributing, and turn each interaction into content that compounds. The leverage appears when participation becomes a flywheel and the product gains durable defensibility.',
       primaryCta: 'See Projects',
       secondaryCta: 'Open GitHub',
       highlightTitle: 'Current Focus',
       highlights: [
         {
-          title: 'Media Pipelines',
-          text: 'Connecting magnet intake, download jobs, poster metadata, and S3 delivery into one usable system.',
+          title: 'Better Viewing Experience',
+          text: 'Treating asset intake, metadata completion, playback prep, and streaming as one smooth chain so “available to watch” becomes “worth watching.”',
         },
         {
-          title: 'AI Audio UX',
-          text: 'Turning news conversations and end-to-end audio models into a more natural language-learning flow.',
+          title: 'More Useful News Podcasts',
+          text: 'Combining AI audio, news understanding, and podcast structure so listening feels genuinely useful, not just ambient.',
         },
         {
           title: 'Narrative Systems',
           text: 'Defining world rules and central conflicts first, then letting AI expand inside those constraints.',
         },
       ],
-      quickFacts: [
-        { label: 'Formats', value: 'Web App / Mini Program / OSS / Fiction' },
-        { label: 'Public Entry', value: 'GitHub Profile + LingDaily Repo' },
-      ],
+      quickFacts: [{ label: 'Formats', value: 'Web App / Mini Program / iOS App' }],
       stats: [
         { value: 'Magnet2Video', label: 'media download and playback pipeline' },
         { value: 'WeChat Music', label: 'Spotify-style mini program' },
-        { value: 'LingDaily', label: 'news-driven language learning' },
+        {
+          value: 'LingDaily',
+          label: 'news podcast + language practice',
+          href: 'https://lingdaily.yasobi.xyz/',
+        },
         { value: 'AI Fiction', label: 'worldbuilding-led writing workflow' },
       ],
     },
@@ -317,17 +320,18 @@ export const portfolioContent = {
       {
         slug: 'lingdaily',
         label: 'Open Source',
-        status: 'GitHub Repository',
+        status: 'Live Product',
         title: 'LingDaily',
         description:
-          'An open-source project that helps users learn a language by talking with AI about the day’s news. Its key strengths are end-to-end audio and automatic vocabulary extraction.',
+          'A product that combines AI audio, daily news, and podcast-style listening. It helps users stay informed while turning news conversations into more natural language practice.',
         details: [
-          'It reframes language learning around conversation instead of passive reading.',
-          'Speech-first interaction brings practice closer to how people actually speak, not just how they type.',
-          'News input, vocabulary mining, and AI dialogue are combined into one complete learning loop.',
+          'It shifts news consumption from “read the story” to “listen to the story and talk back.”',
+          'End-to-end audio and content extraction tie narration, vocabulary context, and follow-up dialogue into one experience chain.',
+          'The goal is not just another AI entry point, but a news podcast people genuinely find useful and want to reopen.',
         ],
         stack: ['OpenAI Audio', 'News Pipeline', 'Vocabulary Extraction', 'Conversation Design'],
         metrics: ['Speech-first', 'Daily News', 'Language Practice'],
+        titleHref: 'https://lingdaily.yasobi.xyz/',
         link: { href: 'https://lingdaily.yasobi.xyz/', label: 'Open LingDaily' },
         visual: 'lingdaily',
       },
@@ -416,9 +420,9 @@ export const portfolioContent = {
     },
     connect: {
       eyebrow: 'CONNECT',
-      title: 'GitHub is the current public doorway',
+      title: 'Keep exploring from here',
       description:
-        'If you want to talk about media infrastructure, AI audio products, WeChat mini program UX, or narrative-driven applications, GitHub is the best place to start.',
+        'GitHub shows the broader project graph, while LingDaily is the clearest live product to try right now.',
       links: [
         {
           href: 'https://github.com/JackYinpei',
@@ -426,9 +430,9 @@ export const portfolioContent = {
           meta: 'Browse public repositories and current work',
         },
         {
-          href: 'https://github.com/JackYinpei/lingdaily',
-          label: 'LingDaily Repo',
-          meta: 'Open-source language learning built around news and voice',
+          href: 'https://lingdaily.yasobi.xyz/',
+          label: 'LingDaily',
+          meta: 'Try the live news-and-audio product',
         },
       ],
       footnote: 'This is the first portfolio version. More case-study depth and visual assets can be layered in next.',

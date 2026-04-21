@@ -50,9 +50,11 @@ export default function PortfolioShell() {
             <div>
               <p className="section-kicker">{content.hero.eyebrow}</p>
               <h1 className="mt-6 max-w-5xl font-display text-[3.6rem] leading-[0.95] tracking-tight text-ink sm:text-[5.25rem] lg:text-[7rem]">
-                {content.hero.lead}{' '}
+                {content.hero.lead}
+                {locale === 'en' ? ' ' : null}
                 <span className="italic text-primary-600">{content.hero.accentA}</span>
-                {content.hero.middle}{' '}
+                {content.hero.middle}
+                {locale === 'en' ? ' ' : null}
                 <span className="italic text-tertiary">{content.hero.accentB}</span>
                 <br className="hidden sm:block" />
                 {content.hero.tail}
@@ -77,12 +79,31 @@ export default function PortfolioShell() {
               </div>
 
               <div className="mt-14 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                {content.hero.stats.map(stat => (
-                  <div key={stat.value} className="ghost-panel rounded-[1.6rem] p-5">
-                    <p className="font-display text-[1.55rem] leading-tight text-ink">{stat.value}</p>
-                    <p className="mt-2 text-sm leading-6 text-ink-secondary">{stat.label}</p>
-                  </div>
-                ))}
+                {content.hero.stats.map(stat => {
+                  const cardClassName =
+                    'ghost-panel block rounded-[1.6rem] p-5 transition-transform duration-300 hover:-translate-y-1'
+
+                  const card = (
+                    <>
+                      <p className="font-display text-[1.55rem] leading-tight text-ink">{stat.value}</p>
+                      <p className="mt-2 text-sm leading-6 text-ink-secondary">{stat.label}</p>
+                    </>
+                  )
+
+                  if (stat.href) {
+                    return (
+                      <SmartLink key={stat.value} href={stat.href} className={cardClassName}>
+                        {card}
+                      </SmartLink>
+                    )
+                  }
+
+                  return (
+                    <div key={stat.value} className="ghost-panel rounded-[1.6rem] p-5">
+                      {card}
+                    </div>
+                  )
+                })}
               </div>
             </div>
 
@@ -138,7 +159,13 @@ export default function PortfolioShell() {
                       </div>
 
                       <h3 className="mt-6 max-w-xl font-display text-4xl leading-tight tracking-tight text-ink sm:text-5xl">
-                        {project.title}
+                        {project.titleHref ? (
+                          <SmartLink href={project.titleHref} className="editorial-link">
+                            {project.title}
+                          </SmartLink>
+                        ) : (
+                          project.title
+                        )}
                       </h3>
 
                       <p className="mt-5 max-w-xl text-base leading-8 text-ink-secondary sm:text-lg">

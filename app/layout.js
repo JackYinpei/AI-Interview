@@ -10,7 +10,7 @@ export const metadata = {
     template: '%s | YangProfile',
   },
   description:
-    'Portfolio of YangProfile, a full-stack developer building media pipelines, AI audio experiences, WeChat mini programs, and AI-assisted fiction workflows.',
+    'Portfolio of YangProfile, a full-stack developer building low-friction content products across better viewing experiences, useful news audio, mini programs, and narrative systems.',
   keywords: [
     'YangProfile',
     'Portfolio',
@@ -31,7 +31,7 @@ export const metadata = {
   openGraph: {
     title: 'YangProfile | Portfolio',
     description:
-      'Full-stack developer portfolio featuring Magnet2Video, a Spotify-style WeChat music player, LingDaily, and AI-assisted fiction workflows.',
+      'Full-stack developer portfolio featuring better viewing systems, a Spotify-style WeChat music player, LingDaily, and narrative-driven product work.',
     url: '/',
     siteName: 'YangProfile',
     locale: 'en_US',
@@ -49,7 +49,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'YangProfile | Portfolio',
     description:
-      'Media pipelines, AI audio interfaces, open-source language learning, and narrative-driven product systems.',
+      'Better viewing experiences, useful news audio, mini-program products, and narrative-driven systems.',
     images: ['/images/og-default.png'],
   },
   robots: {
@@ -83,7 +83,7 @@ const personJsonLd = {
   sameAs: ['https://github.com/JackYinpei'],
   jobTitle: 'Full-Stack Developer',
   description:
-    'Full-stack developer building media pipelines, AI audio products, WeChat mini programs, and AI-assisted fiction workflows.',
+    'Full-stack developer building low-friction content products, useful news audio experiences, mini programs, and narrative systems.',
   knowsAbout: [
     'Next.js',
     'Node.js',
@@ -100,7 +100,7 @@ const websiteJsonLd = {
   name: 'YangProfile',
   url: siteUrl,
   description:
-    'Portfolio featuring product systems, open-source work, AI audio experiences, and creative writing workflows.',
+    'Portfolio featuring content products, useful news audio, live product links, and narrative workflows.',
   inLanguage: ['en', 'zh-CN'],
   author: {
     '@type': 'Person',
